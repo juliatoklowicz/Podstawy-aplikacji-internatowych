@@ -1,0 +1,118 @@
+$font-stack: Garamond, Halvetica;
+$primary-color: #EEE2DC;
+$h1-color: #123C69;
+$h2-color: #AC3B61;
+$bg-color: #EDC7B7;
+
+@mixin headers {
+    font-size: 30px;
+    color: $h2-color;
+    text-decoration: underline;
+}
+
+@mixin paragraphs {
+    margin-left: 10px;
+}
+
+body {
+    background-color: $bg-color;
+    font-family: $font-stack;
+    padding: 2px;
+}
+
+.to-right {
+    float: right;
+    background-color: $primary-color;
+    text-align: center;
+}
+
+.contact {
+    font-size: 40px;
+    font-family: $font-stack;
+    color: $h2-color;
+}
+
+
+h1 {
+    color: $h1-color;
+    letter-spacing: 2px;
+    font-size: 60px;
+    text-decoration: underline;
+}
+
+h2 {
+    @include headers;
+}
+
+.summary, .experience, .skills, .links, .message {
+    @include paragraphs;
+}
+
+table {
+    width: 50%;
+}
+
+th {
+    height: 50px;
+}
+
+th, td {
+    border-bottom: 1px solid #000000;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: $primary-color;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+  
+  
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-github {
+    background: $h1-color;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+input[type=text], textarea{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 50%;
+    background-color: $h1-color;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #0e2d4d;
+}
+
+
+
